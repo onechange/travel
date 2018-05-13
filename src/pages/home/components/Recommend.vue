@@ -2,7 +2,7 @@
 <div>
   <div class="title">热销推荐</div>
   <ul>
-    <li class="item border-bottom" v-for="item of recommendList" :key="item.id" >
+    <li class="item border-bottom" v-for="item of list" :key="item.id" >
       <img class="item-img" :src="item.imgUrl"/>
       <div class="item-info">
         <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return{
-      recommendList : [{
-      id: '0001',
-      imgUrl: 'http://img1.qunarzz.com/sight/p0/1501/40/40ba0ec721370c1.water.jpg_200x200_88739c03.jpg',
-      title: '荷兰花海',
-      desc: '盐城本月收藏Top5╰(￣▽￣)╭',
-    }, {
-      id: '0002',
-      imgUrl: 'http://img1.qunarzz.com/sight/p0/201403/07/df9f3341563c9c00afb84774fafde5ba.jpg_200x200_267feaf9.jpg',
-      title: '麋鹿保护区',
-      desc: '这里特别受欢迎哟(๑‾ ꇴ ‾๑)',
-    }, {
-      id: '0003',
-      imgUrl: 'http://img1.qunarzz.com/sight/p0/1702/af/af8840c141c2a146a3.water.jpg_200x200_d9182e37.jpg',
-      title: '大丰港动物园',
-      desc: '富含国家一类保护动物及国外珍稀野生物种',
-    }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -55,7 +38,7 @@ export default {
       width : 1.7rem
       height : 1.7rem
       padding : .1rem
-    .item-info  
+    .item-info
       flex : 1
       padding : .1rem
       min-width : 0
@@ -77,4 +60,3 @@ export default {
         color : #fff
         ellipsis()
 </style>
-
