@@ -2,8 +2,8 @@
   <div class="icons">
     <swiper>
       <swiper-slide v-for="(page,index) of pages" :key="index">
-        <div class="icon" 
-             v-for="item of page" 
+        <div class="icon"
+             v-for="item of page"
              :key="item.id"
         >
           <div class="icon-img">
@@ -19,8 +19,8 @@
 <script>
 export default {
   name: 'HomeIcons',
-  data (){
-    return{
+  data () {
+    return {
       iconList: [{
         id: '0001',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
@@ -61,7 +61,7 @@ export default {
     }
   },
   computed: {
-    pages (){
+    pages () {
       const pages = []
       this.iconList.forEach((item, index) => {
         const page = Math.floor(index / 8)
