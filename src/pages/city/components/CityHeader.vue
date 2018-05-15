@@ -4,13 +4,10 @@
     <router-link to="/">
       <div class="iconfont header-back">&#xe624;</div>
     </router-link>
-    
   </div>
-  
 </template>
 
 <script>
-  
 </script>
 
 <style lang="stylus" scoped>
@@ -30,6 +27,6 @@
       left :0
       width :.64rem
       font-size :.4rem
-      text-align : center 
+      text-align : center
       color :#fff
 </style>
