@@ -20,7 +20,7 @@ export default {
   components: {
     DetailBanner,
     DetailHeader,
-    DetailList
+    DetailList,
   },
   data () {
     return {
@@ -50,6 +50,9 @@ export default {
     }
   },
   mounted () {
+    this.getDetailInfo()
+  },
+  activated () {
     this.getDetailInfo()
   }
 }
